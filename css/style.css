@@ -1,23 +1,81 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-main .slider{
+
+#pokedex{
+  margin: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  background-image: url("https://www.pngitem.com/pimgs/m/222-2227129_pokemon-pokedex-hd-png-download.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  width: 1000px;
 }
-main .next,
-main .prev{
+#container .next,
+#container .prev{
+  cursor: pointer;
   font-size: 50px;
-  margin: 0 30px;
+  margin: 0 1px;
+  color: black;
+}
+div .schermo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	height: 200px;
+	width: 250px;
+	margin-top: -65px;
+	margin-bottom: 9px;
+	background-color: white;
+}
+.schermo img{
+  height: 180px;
+}
+div .stats {
+  margin-left: 80px;
+	height: 130px;
+	width: 280px;
+	padding: 10px;
+}
+button{
+  cursor: pointer;
+}
+button:focus{
+  outline:none;
+}
+.bot1{
+  width: 50px;
+  border-radius: 25%;
+  height: 10px;
+}
+.bot2{
+  background-color: yellow;
+  width: 50px;
+  height: 50px;
+  color: red;
+  font-size: 26px;
+  font-weight: bolder;
+  padding: 5px;
+  border-radius: 50%;
+  border: 3px solid red;
 }
 .pallini {
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
   margin: auto;
-  width: 50%;
+  text-align: center;
+  width: 70%;
   border: 3px solid green;
   border-radius: 50px;
   padding: 10px;
+}
+.active {
+  color: red;
+}
+.pallini i{
+  cursor: pointer;
 }

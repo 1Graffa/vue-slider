@@ -9,23 +9,34 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main id="app" class="container">
-    <div class="slider">
-      <div class="prev">
-        <i class="fas fa-angle-left"></i>
+  <div id="container">
+    <div id="pokedex">
+      <div class="prev" @click="prevPoke">
+          <i class="fas fa-angle-left"></i>
       </div>
-      <div class="images">
-        <img src="https://mrwgifs.com/wp-content/uploads/2013/07/Not-Sure-If-Fry-Meme-Gif.gif" alt="fry">
+      <div class="schermo">
+        <img :src="immagini[contatore]" alt="pkmn">
       </div>
-      <div class="next">
-        <i class="fas fa-angle-right"></i>
+      <div class="stats">
+        <h3>Nome: <span>Bulbasaur</span></h3>
+        <h3>Tipo: <span>Erba</span></h3>
+        <h3>Descrizione: <span>il primo pokemon del pokedex</span></h3>
+      </div>
+      <div class="next" @click="nextPoke">
+          <i class="fas fa-angle-right"></i>
       </div>
     </div>
     <div class="pallini">
-      <i class="fas fa-circle"></i>
+      <i class="fas fa-circle" v-for="(img, index) in immagini" :class="(index == contatore) ? 'active' : ''" @click="cambiaPoke(index)"></i>
     </div>
-  </main>
+    <div class="bottoni">
+      <button class="bot1" type="button" name="button">Start</button>
+      <button class="bot1" type="button" name="button">Reset</button>
+      <button class="bot2" type="button" name="button">A</button>
+      <button class="bot2" type="button" name="button">B</button>
+    </div>
 
+  </div>
 
 
     <script src="js/script.js" charset="utf-8"></script>
