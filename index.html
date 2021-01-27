@@ -46,7 +46,7 @@
         <h3>Tipo: <span>{{tipo[contatore]}}</span></h3>
         <h3 class="descrizione" >Descrizione:  <span>{{descrizione[contatore]}}</span></h3>
       </div>
-
+      <!-- Pallini -->
     </div>
     <div class="pallini">
       <i class="fas fa-circle" v-for="(img, index) in immagini" :class="(index == contatore) ? 'active' : ''" @click="cambiaPoke(index)"></i>

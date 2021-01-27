@@ -1,3 +1,4 @@
+// costanti per le immagini
 const bulbasaur = "https://projectpokemon.org/images/normal-sprite/bulbasaur.gif"
 const ivysaur = "https://projectpokemon.org/images/normal-sprite/ivysaur.gif";
 const venusaur ="https://projectpokemon.org/images/normal-sprite/venusaur.gif";
@@ -63,26 +64,36 @@ var app = new Vue({
     ],
     intervallo : ""
   },
+  // scorrimento automatico
   created(){
     this.intervallo = setInterval(this.nextPoke,4000);
-
   },
   methods : {
+    // freccia destra
     nextPoke(){
       this.contatore++;
       if(this.contatore > (this.immagini.length -1)){
         this.contatore = 0
       }
     },
+    // freccia sinistra
     prevPoke(){
       this.contatore--;
       if(this.contatore < 0){
         this.contatore = (this.immagini.length -1)
       }
     },
+    // cambia immagine con pallino
     cambiaPoke(indice){
       this.contatore = indice;
       clearInterval(this.intervallo);
     }
   }
 });
+
+// nb: altra versione per l'array di oggetti
+// pokemon : [
+//   {nome: "pikachu", tipo: "elettro", descrizione: "lorem ipsum.."}
+// ]
+// su html:
+// <span>{{pokemon[ contatore ].nome}}</span>
