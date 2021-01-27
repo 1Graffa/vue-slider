@@ -5,9 +5,7 @@
 
 #pokedex{
   margin: auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  position: relative;
   background-image: url("https://www.pngitem.com/pimgs/m/222-2227129_pokemon-pokedex-hd-png-download.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -18,17 +16,16 @@
 #container .next,
 #container .prev{
   cursor: pointer;
-  font-size: 50px;
+  font-size: 30px;
   margin: 0 1px;
   color: black;
 }
 div .schermo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
 	height: 200px;
 	width: 250px;
-	margin-top: -65px;
+	top:213px;
+  left:180px;
 	margin-bottom: 9px;
 	background-color: white;
 }
@@ -36,16 +33,130 @@ div .schermo {
   height: 180px;
 }
 div .stats {
+  position: absolute;
+  top: 250px;
+  left: 500px;
   margin-left: 80px;
 	height: 130px;
 	width: 280px;
 	padding: 10px;
 }
-button{
-  cursor: pointer;
+.stats span{
+  text-transform: capitalize;
 }
-button:focus{
-  outline:none;
+/* cross */
+div.cross {
+  position: absolute;
+  background-color: red;
+  width: 120px;
+  height: 120px;
+  top: 490px;
+  left: 340px;
+}
+div.topcross {
+  width: 30px;
+  height: 30px;
+  background-color: #222;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  box-shadow: -3px 2px black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+div.leftcross {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  background-color: #222;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  box-shadow: -3px 2px black;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+div.midcross {
+  width: 30px;
+  height: 30px;
+  background-color: #222;
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  box-shadow: -3px 2px black;
+}
+div.rightcross {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  background-color: #222;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  box-shadow: -3px 2px black;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+div.botcross {
+  width: 30px;
+  height: 30px;
+  background-color: #222;
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+  box-shadow: -3px 2px black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+div.upT {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid black;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+}
+div.downT {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid black;
+  position: absolute;
+  bottom: 5px;
+  left: 4px;
+}
+div.leftT {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid black;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+}
+div.rightT {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 10px solid black;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+div.midCircle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  border-radius: 30px;
+  background-color: #111;
 }
 .bot1{
   width: 50px;
