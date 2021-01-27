@@ -33,6 +33,9 @@ div .schermo {
   height: 180px;
 }
 div .stats {
+  line-height: 1.6;
+  font-family: monospace;
+  font-size: 120%;
   position: absolute;
   top: 250px;
   left: 500px;
@@ -40,6 +43,9 @@ div .stats {
 	height: 130px;
 	width: 280px;
 	padding: 10px;
+}
+div .stats .descrizione{
+  line-height: normal;
 }
 .stats span{
   text-transform: capitalize;

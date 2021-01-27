@@ -37,6 +37,18 @@ var app = new Vue({
       "blastoise",
       "pikachu"
     ],
+    tipo : [
+      "erba",
+      "erba",
+      "erba",
+      "fuoco",
+      "fuoco",
+      "fuoco",
+      "acqua",
+      "acqua",
+      "acqua",
+      "elettro"
+    ],
     descrizione: [
       "Fin dalla nascita questo Pokémon ha sulla schiena un seme che cresce lentamente.",
       "Il bulbo sulla schiena è cresciuto così tanto da impedirgli di alzarsi in piedi sulle zampe posteriori.",
