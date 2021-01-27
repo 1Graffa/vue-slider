@@ -47,12 +47,11 @@
         <h3 class="descrizione" >Descrizione:  <span>{{descrizione[contatore]}}</span></h3>
       </div>
       <!-- Pallini -->
-    </div>
-    <div class="pallini">
-      <i class="fas fa-circle" v-for="(img, index) in immagini" :class="(index == contatore) ? 'active' : ''" @click="cambiaPoke(index)"></i>
+      <div class="pallini">
+        <i class="fas fa-circle" v-for="(img, index) in immagini" :class="(index == contatore) ? 'active' : ''" @click="cambiaPoke(index)"></i>
+      </div>
     </div>
   </div>
-
 
     <script src="js/script.js" charset="utf-8"></script>
 </body>
