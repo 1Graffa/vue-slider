@@ -64,9 +64,15 @@ var app = new Vue({
     ],
     intervallo : ""
   },
-  // scorrimento automatico
+
   created(){
-    this.intervallo = setInterval(this.nextPoke,4000);
+    // scorrimento automatico
+    this.intervallo = setInterval(this.nextPoke,3000);
+    //con tastiera
+    self.addEventListener("keydown", function(e){
+      app.keyCode = e.keyCode;
+      app.keyDown();
+    });
   },
   methods : {
     // freccia destra
@@ -87,6 +93,14 @@ var app = new Vue({
     cambiaPoke(indice){
       this.contatore = indice;
       clearInterval(this.intervallo);
+    },
+    //input con tastiera (keycode info)
+    keyDown(){
+      if(this.keyCode == "ArrowRight"){
+        this.nextPoke();
+      } else if (this.keyCode == "ArrowLeft"){
+        this.prevPoke();
+      }
     }
   }
 });
