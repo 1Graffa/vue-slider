@@ -70,8 +70,8 @@ var app = new Vue({
     this.intervallo = setInterval(this.nextPoke,3000);
     //con tastiera
     self.addEventListener("keydown", function(e){
-      app.keyCode = e.keyCode;
-      app.keyDown();
+      app.keyDown(e);
+
     });
   },
   methods : {
@@ -95,10 +95,10 @@ var app = new Vue({
       clearInterval(this.intervallo);
     },
     //input con tastiera (keycode info)
-    keyDown(){
-      if(this.keyCode == "ArrowRight"){
+    keyDown(e){
+      if(e.key == "ArrowRight"){
         this.nextPoke();
-      } else if (this.keyCode == "ArrowLeft"){
+      } else if (e.key == "ArrowLeft"){
         this.prevPoke();
       }
     }
