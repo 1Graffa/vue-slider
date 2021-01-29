@@ -2,8 +2,22 @@
   margin: 0;
   padding: 0;
 }
+#container{
+  display: flex;
+  justify-content: center;
+}
+.sx img,
+.dx img{
+  width: 156px
+}
+#container .next,
+#container .prev{
+  cursor: pointer;
+  font-size: 30px;
+  margin: 0 1px;
+  color: black;
+}
 #pokedex{
-  margin: auto;
   position: relative;
   background-image: url("https://www.pngitem.com/pimgs/m/222-2227129_pokemon-pokedex-hd-png-download.png");
   background-position: center;
@@ -12,12 +26,18 @@
   height: 650px;
   width: 1000px;
 }
-#container .next,
-#container .prev{
-  cursor: pointer;
-  font-size: 30px;
-  margin: 0 1px;
-  color: black;
+.logo{
+  position: absolute;
+  top: 5px;
+  right: 90px;
+
+}
+.logo img{
+  width: 300px;
+  transition: 0.5s;
+}
+.logo img:hover{
+  transform: scale(1.2);
 }
 div .schermo {
   position: absolute;
@@ -185,6 +205,7 @@ div.midCircle {
 /* PALLINI */
 .pallini {
   position: absolute;
+  left:12px;
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
